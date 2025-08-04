@@ -117,7 +117,7 @@ footer {
   border-collapse: collapse; /* Remove espaços entre as bordas */
 }
   th, td {
-    border: 2px solid red; /* Adiciona bordas às células */
+    border: 2px solid rgb(207, 117, 0); /* Adiciona bordas às células */
     padding: 8px;
     text-align: center;
   }
