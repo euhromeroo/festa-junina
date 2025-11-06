@@ -1,140 +1,125 @@
-/* Definindo o fundo e a cor do texto para a página */
+/* ------------------------------
+   ESTILOS GERAIS
+------------------------------ */
 body {
-    background-color: #f9f1c1; /* Cor de fundo com um tom suave e alegre */
-    font-family: 'Arial', sans-serif;
-    color: #3e3e3e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 35px;
+    background-color: #fffdf7;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Estilo da imagem no topo */
-img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* Estilo do cabeçalho */
+/* ------------------------------
+   CABEÇALHO
+------------------------------ */
 header {
-    background-color: #a16101; /* Um tom de laranja-amarelo */
-    color: #000000;
-    padding: 20px;
+    background: linear-gradient(90deg, #ffb347, #ffcc33);
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* Alinhamento dos links no topo da página */
-#TOPO {
-    text-align: center;
-    margin: 30px 0;
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
 }
 
-#TOPO h2 {
-    font-size: 24px;
-    color: #e74c3c; /* Vermelho mais forte para o título */
-    text-decoration: underline;
-    margin-bottom: 20px;
-}
-
-/* Lista de links */
-#TOPO ul {
+/* ------------------------------
+   MENU DE NAVEGAÇÃO
+------------------------------ */
+nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espaçamento entre os links */
+    margin-top: 10px;
 }
 
-#TOPO ul li {
+nav ul li {
     display: inline;
+    margin: 0 15px;
 }
 
-#TOPO ul li a {
+nav a {
+    color: #fff;
     text-decoration: none;
-    font-size: 18px;
     font-weight: bold;
-    color: #fff;
-    background-color: #27ae60; /* Verde festa junina */
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-/* Efeito de hover nos links */
-#TOPO ul li a:hover {
-    background-color: #2ecc71; /* Verde mais claro para o hover */
+nav a:hover {
+    text-decoration: underline;
 }
 
-/* Adicionando um footer com fundo junino */
-footer {
-    background-color: #8e44ad; /* Roxo clássico de festa junina */
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+/* ------------------------------
+   SEÇÕES
+------------------------------ */
+.secao {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.section-padded {
-
-     padding: 100px 20px;
-     text-align: center;
-     max-width: 1300px; 
-     margin: 0 auto; 
-    } 
-    
-    .section-title {
-
-     font-family: 'Luckiest Guy', cursive;
-     font-size: 3.8em;
-     color: var(--color-primary); 
-     margin-bottom: 60px; 
-     text-shadow: 3px 3px 5px rgba(95, 88, 88, 0.2); 
-     position: relative; display: inline-block; padding: 0 20px; 
-    } 
-    
-    .section-title::after {
-     content: ''; 
-     display: block; 
-     width: 120px; 
-     height: 10px; 
-     background-color: var(--color-red); 
-     margin: 15px auto 0; 
-     border-radius: 8px; 
-    } 
-    
-    .section-description {
-     font-size: 1.2em; 
-     margin-bottom: 40px; 
-     max-width: 800px; 
-     margin-left: auto; 
-     margin-right: auto; 
-     color: var(--color-dark);
-     }
-
-     table {
-  width: 100%;
-  border-collapse: collapse; /* Remove espaços entre as bordas */
+.secao h2 {
+    color: #e68a00;
+    border-left: 5px solid #e68a00;
+    padding-left: 10px;
 }
-  th, td {
-    border: 2px solid rgb(207, 117, 0); /* Adiciona bordas às células */
-    padding: 8px;
-    text-align: center;
-  }
-  th {
-    background-color: "#FFA500"; /* cor de fundo para o cabeçalho */  
-  }
 
-  body, html {
+.secao img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* ------------------------------
+   LISTA DE ESTADOS
+------------------------------ */
+.lista-estados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
     padding: 0;
-    margin: 0;
-  }
-
-#inicio {
-  background-color; color: #80591e;
-  padding: 20px;
-  border-bottom: 2px darkkhaki;
-  text-align: center;
+    list-style: none;
 }
 
+.lista-estados li {
+    background-color: #fff5e1;
+    border: 1px solid #ffd580;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+}
+
+/* ------------------------------
+   RODAPÉ
+------------------------------ */
+footer {
+    background-color: #ffcc33;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* ------------------------------
+   RESPONSIVIDADE
+------------------------------ */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .secao {
+        padding: 30px 15px;
+    }
+}
